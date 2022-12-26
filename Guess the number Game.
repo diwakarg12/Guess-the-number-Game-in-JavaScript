@@ -1,0 +1,20 @@
+console.log("          ------------------------------");
+console.log("          |    Guess the number Game    |");
+console.log("          ------------------------------");
+let num = Math.floor(Math.random() * 101);
+let a, count = 0;
+while (a != num) {
+  a = prompt("Guess the random number");
+  a = Number.parseInt(a);
+  if (a < num)
+    console.log("Your Entered number is Less than Random number");
+  else if (a > num)
+    console.log("Your Entered number is Greater than Random number");
+  else {
+    console.log("Your Entered number is Equal to the Random number");
+  }
+  count++
+}
+console.log("You Guess the correct answer");
+console.log("You have Guessed in ", count, "attempts.");
+console.log("Your Score is", (100 - count));
